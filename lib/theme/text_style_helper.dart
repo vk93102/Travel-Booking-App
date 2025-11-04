@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+import '../core/app_export.dart';
+
+/// A helper class for managing text styles in the application
+class TextStyleHelper {
+  static TextStyleHelper? _instance;
+
+  TextStyleHelper._();
+
+  static TextStyleHelper get instance {
+    _instance ??= TextStyleHelper._();
+    return _instance!;
+  }
+
+  // Headline Styles
+  // Medium-large text styles for section headers
+
+  TextStyle get headline24BoldSyne => TextStyle(
+        fontSize: 24.fSize,
+        fontWeight: FontWeight.w700,
+        fontFamily: 'Syne',
+        color: appTheme.white_A700,
+      );
+
+  // Title Styles
+  // Medium text styles for titles and subtitles
+
+  TextStyle get title20RegularRoboto => TextStyle(
+        fontSize: 20.fSize,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Roboto',
+      );
+
+  TextStyle get title18BoldSyne => TextStyle(
+        fontSize: 18.fSize,
+        fontWeight: FontWeight.w700,
+        fontFamily: 'Syne',
+        color: appTheme.gray_900_02,
+      );
+
+  // Body Styles
+  // Standard text styles for body content
+
+  TextStyle get body14RegularPoppins => TextStyle(
+        fontSize: 14.fSize,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: appTheme.black_900,
+      );
+
+  TextStyle get body14SemiBoldSyne => TextStyle(
+        fontSize: 14.fSize,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Syne',
+      );
+
+  TextStyle get body13RegularPoppins => TextStyle(
+        fontSize: 13.fSize,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: appTheme.gray_500,
+      );
+}
