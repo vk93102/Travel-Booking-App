@@ -33,6 +33,42 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                         onTapScreenTitle: () => onTapScreenTitle(
                             context, AppRoutes.hostCategorySelectionScreen),
                       ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 586",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.locationSharingScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 590",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.propertyDetailsSetupScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 594",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.guestLimitSetupScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 593",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.propertyRegistrationScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 585",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.propertyCategorySelectionScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 589",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.propertyAddressFormScreen),
+                      ),
                     ],
                   ),
                 ),
@@ -96,7 +132,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
         return className;
       },
       isScrollControlled: true,
-      backgroundColor: appTheme.transparentCustom,
+      backgroundColor: Colors.transparent,
     );
   }
 
@@ -107,7 +143,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
       builder: (context) {
         return AlertDialog(
           content: className,
-          backgroundColor: appTheme.transparentCustom,
+          backgroundColor: Colors.transparent,
           insetPadding: EdgeInsets.zero,
         );
       },

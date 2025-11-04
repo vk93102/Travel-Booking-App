@@ -38,6 +38,12 @@ class TextStyleHelper {
         color: appTheme.gray_900_02,
       );
 
+  TextStyle get title16MediumPoppins => TextStyle(
+        fontSize: 16.fSize,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Poppins',
+      );
+
   // Body Styles
   // Standard text styles for body content
 
@@ -54,10 +60,28 @@ class TextStyleHelper {
         fontFamily: 'Syne',
       );
 
+  TextStyle get body14MediumPoppins => TextStyle(
+        fontSize: 14.fSize,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Poppins',
+      );
+
+  TextStyle get body14RegularPlusJakartaSans => TextStyle(
+        fontSize: 14.fSize,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Plus Jakarta Sans',
+      );
+
   TextStyle get body13RegularPoppins => TextStyle(
         fontSize: 13.fSize,
         fontWeight: FontWeight.w400,
         fontFamily: 'Poppins',
         color: appTheme.gray_500,
+      );
+
+  TextStyle get body12RegularPoppins => TextStyle(
+        fontSize: 12.fSize,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
       );
 }

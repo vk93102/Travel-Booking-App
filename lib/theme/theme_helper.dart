@@ -67,7 +67,25 @@ class LightCodeColors {
   Color get color15000A => Color(0x15000A13);
   Color get color15E50A => Color(0x15E50A13);
 
+  // New Color Constants
+  Color get gray_700 => Color(0xFF515151);
+  Color get gray_700_CC => Color(0xCC515151);
+  Color get gray_600 => Color(0xFFA4A4A4);
+  Color get color0C0000 => Color(0x0C000000);
+  Color get red_300 => Color(0xFFE57373);
+  Color get gray_800 => Color(0xFF737373);
+  Color get amber_600 => Color(0xFFFFB800);
+  Color get brown_600 => Color(0xFF7C412E);
+  Color get gray_300 => Color(0xFFD9D9D9);
+  Color get blue_500 => Color(0xFF2196F3);
+  Color get gray_300_02 => Color(0xFFC3C3C3);
+  Color get gray_300_03 => Color(0xFFBCBCBC);
+  Color get greenCustom => Colors.green;
+  Color get redCustom => Colors.red;
+
   // Color Shades - Each shade has its own dedicated constant
   Color get grey200 => Colors.grey.shade200;
   Color get grey100 => Colors.grey.shade100;
+  Color get grey300 => Colors.grey[300]!;
+  Color get grey400 => Colors.grey[400]!;
 }
