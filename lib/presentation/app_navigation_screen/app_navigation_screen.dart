@@ -69,6 +69,42 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                         onTapScreenTitle: () => onTapScreenTitle(
                             context, AppRoutes.propertyAddressFormScreen),
                       ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 604",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.uploadedPhotosGalleryScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 603",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.photoUploadGalleryScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 599",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.extraServicesAddonsScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 596",
+                        onTapScreenTitle: () => onTapScreenTitle(context,
+                            AppRoutes.propertyAmenitiesSelectionScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 600",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.propertyPhotoUploadScreen),
+                      ),
+                      _buildScreenTitle(
+                        context,
+                        screenTitle: "iPhone 16 - 608",
+                        onTapScreenTitle: () => onTapScreenTitle(
+                            context, AppRoutes.bookingPreferenceSetupScreen),
+                      ),
                     ],
                   ),
                 ),

@@ -88,4 +88,17 @@ class LightCodeColors {
   Color get grey100 => Colors.grey.shade100;
   Color get grey300 => Colors.grey[300]!;
   Color get grey400 => Colors.grey[400]!;
+
+  // Additional New Colors
+  Color get brown_100 => Color(0xFFB5804F);
+  Color get gray_650 => Color(0xFF888888);
+  Color get gray_300_66 => Color(0x66D9D9D9);
+  Color get color14000000 => Color(0x14000000);
+  Color get gray_750 => Color(0xFF939393);
+  Color get white_FA => Color(0xFFFAFAFA);
+  Color get green_400 => Color(0xFF4CAF50);
+  Color get gray_650_88 => Color(0x88888888);
+  Color get white_FA_99 => Color(0x99FAFAFA);
+  Color get orangeCustom => Colors.orange;
+  Color get blackCustom => Colors.black;
 }

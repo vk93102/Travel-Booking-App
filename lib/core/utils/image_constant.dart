@@ -15,6 +15,30 @@ class ImageConstant {
   static String imgRectangle39580 = '${_basePath}img_rectangle_39580.png';
   static String imgRectangle39581 = '${_basePath}img_rectangle_39581.png';
   static String imgRectangle39582 = '${_basePath}img_rectangle_39582.png';
+  static String imgRectangle39575 = '${_basePath}img_rectangle_39575.png';
+  static String imgRectangle39575188x174 =
+      '${_basePath}img_rectangle_39575_188x174.png';
+  static String imgRectangle395751 = '${_basePath}img_rectangle_39575_1.png';
+  static String imgRectangle395752 = '${_basePath}img_rectangle_39575_2.png';
+  static String imgRectangle39608 = '${_basePath}img_rectangle_39608.png';
+  static String imgRectangle39598 = '${_basePath}img_rectangle_39598.png';
+  static String imgRectangle39610 = '${_basePath}img_rectangle_39610.png';
+  static String imgRectangle39612 = '${_basePath}img_rectangle_39612.png';
+  static String imgRectangle39611 = '${_basePath}img_rectangle_39611.png';
+  static String imgRectangle3958276x86 =
+      '${_basePath}img_rectangle_39582_76x86.png';
+  static String imgRectangle39626 = '${_basePath}img_rectangle_39626.png';
+  static String imgRectangle39627 = '${_basePath}img_rectangle_39627.png';
+  static String imgRectangle39628 = '${_basePath}img_rectangle_39628.png';
+  static String imgRectangle39629 = '${_basePath}img_rectangle_39629.png';
+  static String imgRectangle39630 = '${_basePath}img_rectangle_39630.png';
+  static String imgRectangle39631 = '${_basePath}img_rectangle_39631.png';
+  static String imgRectangle39596 = '${_basePath}img_rectangle_39596.png';
+  static String imgRectangle39638 = '${_basePath}img_rectangle_39638.png';
+  static String imgRectangle39637 = '${_basePath}img_rectangle_39637.png';
+  static String imgRectangle39645 = '${_basePath}img_rectangle_39645.png';
+  static String imgRectangle39646 = '${_basePath}img_rectangle_39646.png';
+  static String imgRectangle39647 = '${_basePath}img_rectangle_39647.png';
 
   // Guest Limit Setup Screen
   static String imgVector = '${_basePath}img_vector.svg';
@@ -43,6 +67,31 @@ class ImageConstant {
 
   // Property Registration Screen
   // (Uses existing imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // Booking Preference Setup Screen
+  static String imgAkarIconsThunder = '${_basePath}img_akar_icons_thunder.png';
+  static String imgMynauiFile = '${_basePath}img_mynaui_file.png';
+  static String imgMaterialSymbol = '${_basePath}img_material_symbol.png';
+
+  // Extra Services Addons Screen
+  static String imgLineiconsPlus = '${_basePath}img_lineicons_plus.svg';
+
+  // Photo Upload Gallery Screen
+  // (Uses existing imgFrame2147234282, imgLineiconsPlus, and imgMynauiarrowupWhiteA700)
+
+  // Property Amenities Selection Screen
+  // (Uses existing imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // Property Photo Upload Screen
+  static String imgIconamoonArrowUp2Light =
+      '${_basePath}img_iconamoon_arrow_up_2_light.svg';
+  static String imgLineiconsPlusGray50002 =
+      '${_basePath}img_lineicons_plus_gray_500_02.svg';
+  static String imgIconoirCamera = '${_basePath}img_iconoir_camera.svg';
+
+  // Uploaded Photos Gallery Screen
+  static String imgFrame2147234282Black900 =
+      '${_basePath}img_frame_2147234282_black_900.svg';
 
   // Custom Dropdown Widget
   static String imgChevronright = '${_basePath}img_chevronright.svg';

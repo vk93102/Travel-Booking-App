@@ -18,6 +18,9 @@ dependencies:
   google_maps_flutter: ^2.5.0
   geolocator: ^10.1.0
   flutter_rating_bar: ^4.0.1
+  image_picker: ^1.0.4
+  permission_handler: ^11.1.0
+  camera: ^0.10.5+5
 dev_dependencies: 
   flutter_test:    # 🚨 CRITICAL: Required for Flutter project testing - DO NOT REMOVE
     sdk: flutter    # 🚨 CRITICAL: Required for Flutter project testing - DO NOT REMOVE
@@ -41,10 +44,8 @@ flutter:
           weight: 400
         - asset: assets/fonts/PoppinsMedium.ttf
           weight: 500
-    - family: Plus Jakarta Sans
-      fonts: 
-        - asset: assets/fonts/PlusJakartaSansRegular.ttf
-          weight: 400
+        - asset: assets/fonts/PoppinsSemiBold.ttf
+          weight: 600
 
   # 🚨 CRITICAL ASSET MANAGEMENT RULES:
   # - DO NOT ADD NEW ASSET DIRECTORIES (assets/svg/, assets/icons/, etc.)
