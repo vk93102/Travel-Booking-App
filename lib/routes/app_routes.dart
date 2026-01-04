@@ -14,6 +14,18 @@ import '../presentation/extra_services_addons_screen/extra_services_addons_scree
 import '../presentation/property_amenities_selection_screen/property_amenities_selection_screen.dart';
 import '../presentation/property_photo_upload_screen/property_photo_upload_screen.dart';
 import '../presentation/booking_preference_setup_screen/booking_preference_setup_screen.dart';
+import '../presentation/event_booking_settings_screen/event_booking_settings_screen.dart';
+import '../presentation/weekday_pricing_setup_screen/weekday_pricing_setup_screen.dart';
+import '../presentation/create_discount_coupons_screen/create_discount_coupons_screen.dart';
+import '../presentation/weekend_pricing_setup_screen/weekend_pricing_setup_screen.dart';
+import '../presentation/bayt_ai_setup_screen/bayt_ai_setup_screen.dart';
+import '../presentation/event_booking_configuration_screen/event_booking_configuration_screen.dart';
+import '../presentation/package_selection_screen/package_selection_screen.dart';
+import '../presentation/cancellation_policy_selection_screen/cancellation_policy_selection_screen.dart';
+import '../presentation/id_document_front_capture_screen/id_document_front_capture_screen.dart';
+import '../presentation/id_document_back_capture_screen/id_document_back_capture_screen.dart';
+import '../presentation/identity_verification_setup_screen/identity_verification_setup_screen.dart';
+import '../presentation/government_id_setup_screen/government_id_setup_screen.dart';
 
 import '../presentation/host_onboarding_screen/binding/host_onboarding_binding.dart';
 import '../presentation/host_category_selection_screen/binding/host_category_selection_binding.dart';
@@ -29,6 +41,18 @@ import '../presentation/extra_services_addons_screen/binding/extra_services_addo
 import '../presentation/property_amenities_selection_screen/binding/property_amenities_selection_binding.dart';
 import '../presentation/property_photo_upload_screen/binding/property_photo_upload_binding.dart';
 import '../presentation/booking_preference_setup_screen/binding/booking_preference_setup_binding.dart';
+import '../presentation/event_booking_settings_screen/binding/event_booking_settings_binding.dart';
+import '../presentation/weekday_pricing_setup_screen/binding/weekday_pricing_setup_binding.dart';
+import '../presentation/create_discount_coupons_screen/binding/create_discount_coupons_binding.dart';
+import '../presentation/weekend_pricing_setup_screen/binding/weekend_pricing_setup_binding.dart';
+import '../presentation/bayt_ai_setup_screen/binding/bayt_ai_setup_binding.dart';
+import '../presentation/event_booking_configuration_screen/binding/event_booking_configuration_binding.dart';
+import '../presentation/package_selection_screen/binding/package_selection_binding.dart';
+import '../presentation/cancellation_policy_selection_screen/binding/cancellation_policy_selection_binding.dart';
+import '../presentation/id_document_front_capture_screen/binding/id_document_front_capture_binding.dart';
+import '../presentation/id_document_back_capture_screen/binding/id_document_back_capture_binding.dart';
+import '../presentation/identity_verification_setup_screen/binding/identity_verification_setup_binding.dart';
+import '../presentation/government_id_setup_screen/binding/government_id_setup_binding.dart';
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 
@@ -58,6 +82,27 @@ class AppRoutes {
       '/property_photo_upload_screen';
   static const String bookingPreferenceSetupScreen =
       '/booking_preference_setup_screen';
+  static const String eventBookingSettingsScreen =
+      '/event_booking_settings_screen';
+  static const String weekdayPricingSetupScreen =
+      '/weekday_pricing_setup_screen';
+  static const String createDiscountCouponsScreen =
+      '/create_discount_coupons_screen';
+  static const String weekendPricingSetupScreen =
+      '/weekend_pricing_setup_screen';
+  static const String baytAiSetupScreen = '/bayt_ai_setup_screen';
+  static const String eventBookingConfigurationScreen =
+      '/event_booking_configuration_screen';
+  static const String packageSelectionScreen = '/package_selection_screen';
+  static const String cancellationPolicySelectionScreen =
+      '/cancellation_policy_selection_screen';
+  static const String idDocumentFrontCaptureScreen =
+      '/id_document_front_capture_screen';
+  static const String idDocumentBackCaptureScreen =
+      '/id_document_back_capture_screen';
+  static const String identityVerificationSetupScreen =
+      '/identity_verification_setup_screen';
+  static const String governmentIdSetupScreen = '/government_id_setup_screen';
 
   static const String appNavigationScreen = '/app_navigation_screen';
   static const String initialRoute = '/';
@@ -132,6 +177,66 @@ class AppRoutes {
       name: bookingPreferenceSetupScreen,
       page: () => BookingPreferenceSetupScreen(),
       bindings: [BookingPreferenceSetupBinding()],
+    ),
+    GetPage(
+      name: eventBookingSettingsScreen,
+      page: () => EventBookingSettingsScreen(),
+      bindings: [EventBookingSettingsBinding()],
+    ),
+    GetPage(
+      name: weekdayPricingSetupScreen,
+      page: () => WeekdayPricingSetupScreen(),
+      bindings: [WeekdayPricingSetupBinding()],
+    ),
+    GetPage(
+      name: createDiscountCouponsScreen,
+      page: () => CreateDiscountCouponsScreen(),
+      bindings: [CreateDiscountCouponsBinding()],
+    ),
+    GetPage(
+      name: weekendPricingSetupScreen,
+      page: () => WeekendPricingSetupScreen(),
+      bindings: [WeekendPricingSetupBinding()],
+    ),
+    GetPage(
+      name: baytAiSetupScreen,
+      page: () => BaytAiSetupScreen(),
+      bindings: [BaytAiSetupBinding()],
+    ),
+    GetPage(
+      name: eventBookingConfigurationScreen,
+      page: () => EventBookingConfigurationScreen(),
+      bindings: [EventBookingConfigurationBinding()],
+    ),
+    GetPage(
+      name: packageSelectionScreen,
+      page: () => PackageSelectionScreen(),
+      bindings: [PackageSelectionBinding()],
+    ),
+    GetPage(
+      name: cancellationPolicySelectionScreen,
+      page: () => CancellationPolicySelectionScreen(),
+      bindings: [CancellationPolicySelectionBinding()],
+    ),
+    GetPage(
+      name: idDocumentFrontCaptureScreen,
+      page: () => IdDocumentFrontCaptureScreen(),
+      bindings: [IdDocumentFrontCaptureBinding()],
+    ),
+    GetPage(
+      name: idDocumentBackCaptureScreen,
+      page: () => IdDocumentBackCaptureScreen(),
+      bindings: [IdDocumentBackCaptureBinding()],
+    ),
+    GetPage(
+      name: identityVerificationSetupScreen,
+      page: () => IdentityVerificationSetupScreen(),
+      bindings: [IdentityVerificationSetupBinding()],
+    ),
+    GetPage(
+      name: governmentIdSetupScreen,
+      page: () => GovernmentIdSetupScreen(),
+      bindings: [GovernmentIdSetupBinding()],
     ),
     GetPage(
       name: appNavigationScreen,

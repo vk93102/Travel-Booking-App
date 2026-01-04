@@ -47,7 +47,7 @@ class CustomDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
-      value: value,
+      initialValue: value,
       items: (items ?? []).map((String item) {
         return DropdownMenuItem<String>(
           value: item,
@@ -106,14 +106,14 @@ class CustomDropdown extends StatelessWidget {
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.h),
           borderSide: BorderSide(
-            color: Colors.red,
+            color: appTheme.redCustom,
             width: 1.h,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.h),
           borderSide: BorderSide(
-            color: Colors.red,
+            color: appTheme.redCustom,
             width: 1.h,
           ),
         ),

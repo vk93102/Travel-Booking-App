@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/theme_helper.dart';
+
 /**
  * A customizable switch widget that wraps Flutter's built-in Switch component.
  * Provides configurable colors and state management for toggle functionality.
@@ -40,9 +42,9 @@ class CustomSwitch extends StatelessWidget {
     return Switch(
       value: value,
       onChanged: onChanged,
-      activeColor: activeColor ?? Theme.of(context).primaryColor,
-      inactiveThumbColor: inactiveThumbColor ?? Colors.grey[300],
-      inactiveTrackColor: inactiveTrackColor ?? Colors.grey[400],
+      activeThumbColor: activeColor ?? Theme.of(context).primaryColor,
+      inactiveThumbColor: inactiveThumbColor ?? appTheme.grey300,
+      inactiveTrackColor: inactiveTrackColor ?? appTheme.grey400,
     );
   }
 }

@@ -19,7 +19,7 @@ class PropertyAddressFormScreen
         preferredSize: Size.fromHeight(56.h),
         child: CustomAppBar(
           leadingIcon: ImageConstant.imgFrame2147234282,
-          backgroundColor: Colors.transparent,
+          backgroundColor: appTheme.transparentCustom,
           leadingButtonColor: Color(0xFFFFFFFF),
           onLeadingPressed: () => Get.back(),
         ),

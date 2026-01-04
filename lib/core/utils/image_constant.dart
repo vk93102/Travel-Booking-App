@@ -39,6 +39,7 @@ class ImageConstant {
   static String imgRectangle39645 = '${_basePath}img_rectangle_39645.png';
   static String imgRectangle39646 = '${_basePath}img_rectangle_39646.png';
   static String imgRectangle39647 = '${_basePath}img_rectangle_39647.png';
+  static String imgRectangle39597 = '${_basePath}img_rectangle_39597.png';
 
   // Guest Limit Setup Screen
   static String imgVector = '${_basePath}img_vector.svg';
@@ -92,6 +93,46 @@ class ImageConstant {
   // Uploaded Photos Gallery Screen
   static String imgFrame2147234282Black900 =
       '${_basePath}img_frame_2147234282_black_900.svg';
+
+  // Bayt AI Setup Screen
+  static String imgGroup1000003416 = '${_basePath}img_group_1000003416.png';
+  static String imgFluentWand20Regular =
+      '${_basePath}img_fluent_wand_20_regular.svg';
+
+  // Event Booking Configuration Screen
+  static String imgQlementineIcon = '${_basePath}img_qlementine_icon.svg';
+
+  // Create Discount Coupons Screen
+  // (Uses existing imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // Event Booking Settings Screen
+  // (Uses existing imgRectangle39597, imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // Weekday Pricing Setup Screen
+  // (Uses existing imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // Weekend Pricing Setup Screen
+  // (Uses existing imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // Cancellation Policy Selection Screen
+  // (Uses existing imgQlementineIcon, imgFrame2147234282, and imgMynauiarrowupWhiteA700)
+
+  // Government ID Setup Screen
+  static String imgIconamoonArrowUp2LightBlack900 =
+      '${_basePath}img_iconamoon_arrow_up_2_light_black_900.svg';
+  // (Uses existing imgFrame2147234282 and imgMynauiarrowupWhiteA700)
+
+  // ID Document Back Capture Screen
+  // (Uses existing imgFrame2147234282)
+
+  // ID Document Front Capture Screen
+  // (Uses existing imgFrame2147234282)
+
+  // Identity Verification Setup Screen
+  // (Uses existing imgIconamoonArrowUp2LightBlack900, imgFrame2147234282, and imgMynauiarrowupWhiteA700)
+
+  // Package Selection Screen
+  // (Uses existing imgQlementineIcon, imgFrame2147234282, and imgMynauiarrowupWhiteA700)
 
   // Custom Dropdown Widget
   static String imgChevronright = '${_basePath}img_chevronright.svg';

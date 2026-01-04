@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../core/app_export.dart';
-import '../core/utils/image_constant.dart';
 
 extension ImageTypeExtension on String {
   ImageType get imageType {
@@ -124,7 +123,7 @@ class CustomImageView extends StatelessWidget {
             fit: fit ?? BoxFit.contain,
             colorFilter: this.color != null
                 ? ColorFilter.mode(
-                    this.color ?? Colors.transparent, BlendMode.srcIn)
+                    this.color ?? appTheme.transparentCustom, BlendMode.srcIn)
                 : null,
           ),
         );
@@ -144,7 +143,7 @@ class CustomImageView extends StatelessWidget {
           fit: fit ?? BoxFit.contain,
           colorFilter: this.color != null
               ? ColorFilter.mode(
-                  this.color ?? Colors.transparent, BlendMode.srcIn)
+                  this.color ?? appTheme.transparentCustom, BlendMode.srcIn)
               : null,
         );
       case ImageType.network:
@@ -158,8 +157,8 @@ class CustomImageView extends StatelessWidget {
             height: 30,
             width: 30,
             child: LinearProgressIndicator(
-              color: Colors.grey.shade200,
-              backgroundColor: Colors.grey.shade100,
+              color: appTheme.grey200,
+              backgroundColor: appTheme.grey100,
             ),
           ),
           errorWidget: (context, url, error) => Image.asset(

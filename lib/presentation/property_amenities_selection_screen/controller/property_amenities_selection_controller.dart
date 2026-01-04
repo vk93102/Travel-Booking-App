@@ -146,7 +146,7 @@ class PropertyAmenitiesSelectionController extends GetxController {
         'Selection Required',
         'Please select at least one amenity to continue',
         backgroundColor: Color(0xFFE57373),
-        colorText: Colors.white,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
@@ -157,7 +157,7 @@ class PropertyAmenitiesSelectionController extends GetxController {
       'Amenities Selected',
       '${selectedAmenities.length} amenities selected successfully',
       backgroundColor: Color(0xFF4CAF50),
-      colorText: Colors.white,
+      colorText: appTheme.whiteCustom,
       snackPosition: SnackPosition.BOTTOM,
     );
 

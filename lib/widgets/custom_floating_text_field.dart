@@ -105,14 +105,14 @@ class CustomFloatingTextField extends StatelessWidget {
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.h),
             borderSide: BorderSide(
-              color: Colors.red,
+              color: appTheme.redCustom,
               width: 1.h,
             ),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.h),
             borderSide: BorderSide(
-              color: Colors.red,
+              color: appTheme.redCustom,
               width: 1.h,
             ),
           ),

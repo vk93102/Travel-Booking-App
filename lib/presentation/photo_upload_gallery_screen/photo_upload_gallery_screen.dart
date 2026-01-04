@@ -20,7 +20,7 @@ class PhotoUploadGalleryScreen extends GetWidget<PhotoUploadGalleryController> {
           child: Row(
             children: [
               CustomIconButton(
-                iconPath: 'assets/images/img_frame_2147234282.svg',
+                iconPath: ImageConstant.imgFrame2147234282,
                 height: 44.h,
                 width: 44.h,
                 backgroundColor: Color(0xFFFFFFFF),
@@ -213,7 +213,7 @@ class PhotoUploadGalleryScreen extends GetWidget<PhotoUploadGalleryController> {
         children: [
           CustomButton(
             text: 'Next',
-            rightIcon: 'assets/images/img_mynauiarrowup_white_a700.svg',
+            rightIcon: ImageConstant.imgMynauiarrowupWhiteA700,
             backgroundColor: Color(0xFF260F06),
             textColor: Color(0xFFFFFFFF),
             borderRadius: 22.h,

@@ -101,4 +101,20 @@ class LightCodeColors {
   Color get white_FA_99 => Color(0x99FAFAFA);
   Color get orangeCustom => Colors.orange;
   Color get blackCustom => Colors.black;
+
+  // Additional new color constants from the input
+  Color get gray_650_02 => Color(0xFF605C5C);
+  Color get red_500 => Color(0xFFF44336);
+  Color get gray_950 => Color(0xFF111111);
+  Color get gray_550 => Color(0xFFB8B8B8);
+  Color get gray_850 => Color(0xFF808080);
+  Color get brown_700 => Color(0xFF864E1A);
+  Color get gray_700_80 => Color(0x80515151);
+  Color get gray_900_02_CC => Color(0xCC041816);
+  Color get gray_850_02 => Color(0xFF444444);
+
+  // New colors from input - additional ones that weren't already present
+  Color get gray_560 => Color(0xFF5A5A5A);
+  Color get gray_250 => Color(0xFFF2F2F2);
+  Color get brown_700_02 => Color(0xFF864E19);
 }

@@ -15,7 +15,7 @@ class PropertyPhotoUploadScreen
     return Scaffold(
       backgroundColor: Color(0xFFF7F5F4),
       appBar: CustomAppBar(
-        leadingIcon: 'assets/images/img_frame_2147234282.svg',
+        leadingIcon: ImageConstant.imgFrame2147234282,
         onLeadingPressed: () => Get.back(),
       ),
       body: Container(
@@ -156,7 +156,7 @@ class PropertyPhotoUploadScreen
                           ),
                           child: Icon(
                             Icons.close,
-                            color: Colors.white,
+                            color: appTheme.whiteCustom,
                             size: 16.h,
                           ),
                         ),
@@ -197,7 +197,7 @@ class PropertyPhotoUploadScreen
         children: [
           Obx(() => CustomButton(
                 text: 'Next',
-                rightIcon: 'assets/images/img_mynauiarrowup_white_a700.svg',
+                rightIcon: ImageConstant.imgMynauiarrowupWhiteA700,
                 backgroundColor: Color(0xFF260F06),
                 textColor: Color(0xFFFFFFFF),
                 isEnabled: controller.canProceed.value,

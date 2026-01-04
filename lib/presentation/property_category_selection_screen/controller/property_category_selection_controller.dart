@@ -51,7 +51,7 @@ class PropertyCategorySelectionController extends GetxController {
         'Please select a property category to continue',
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Color(0xFFE57373),
-        colorText: Colors.white,
+        colorText: appTheme.whiteCustom,
       );
       return;
     }

@@ -28,7 +28,7 @@ class BookingPreferenceSetupScreen
 
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
-      leadingIcon: 'assets/images/img_frame_2147234282.svg',
+      leadingIcon: ImageConstant.imgFrame2147234282,
       onLeadingPressed: () => Get.back(),
     );
   }
@@ -184,7 +184,7 @@ class BookingPreferenceSetupScreen
         children: [
           CustomButton(
             text: 'Next',
-            rightIcon: 'assets/images/img_mynauiarrowup_white_a700.svg',
+            rightIcon: ImageConstant.imgMynauiarrowupWhiteA700,
             onPressed: () => controller.onNextPressed(),
           ),
         ],

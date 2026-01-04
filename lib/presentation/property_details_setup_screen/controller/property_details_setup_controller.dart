@@ -97,8 +97,8 @@ class PropertyDetailsSetupController extends GetxController {
     Get.snackbar(
       'Success',
       'Property details saved successfully',
-      backgroundColor: Colors.green,
-      colorText: Colors.white,
+      backgroundColor: appTheme.greenCustom,
+      colorText: appTheme.whiteCustom,
       snackPosition: SnackPosition.TOP,
     );
 

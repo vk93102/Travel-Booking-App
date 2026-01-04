@@ -43,8 +43,8 @@ class PhotoUploadGalleryController extends GetxController {
         Get.snackbar(
           'Permission Required',
           'Camera permission is required to take photos',
-          backgroundColor: Colors.orange,
-          colorText: Colors.white,
+          backgroundColor: appTheme.orangeCustom,
+          colorText: appTheme.whiteCustom,
         );
         return;
       }
@@ -55,8 +55,8 @@ class PhotoUploadGalleryController extends GetxController {
       Get.snackbar(
         'Error',
         'Failed to pick image. Please try again.',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
       );
     } finally {
       isLoading.value = false;
@@ -112,16 +112,16 @@ class PhotoUploadGalleryController extends GetxController {
         Get.snackbar(
           'Success',
           'Photo added successfully!',
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
+          backgroundColor: appTheme.greenCustom,
+          colorText: appTheme.whiteCustom,
         );
       }
     } catch (e) {
       Get.snackbar(
         'Error',
         'Failed to take photo. Please try again.',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
       );
     }
   }
@@ -141,16 +141,16 @@ class PhotoUploadGalleryController extends GetxController {
         Get.snackbar(
           'Success',
           '${images.length} photo(s) added successfully!',
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
+          backgroundColor: appTheme.greenCustom,
+          colorText: appTheme.whiteCustom,
         );
       }
     } catch (e) {
       Get.snackbar(
         'Error',
         'Failed to pick photos. Please try again.',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
       );
     }
   }
@@ -159,7 +159,7 @@ class PhotoUploadGalleryController extends GetxController {
     // Navigate to photo viewer or show full screen image
     Get.dialog(
       Dialog(
-        backgroundColor: Colors.black,
+        backgroundColor: appTheme.blackCustom,
         child: Stack(
           children: [
             Center(
@@ -177,7 +177,7 @@ class PhotoUploadGalleryController extends GetxController {
                 onPressed: () => Get.back(),
                 icon: Icon(
                   Icons.close,
-                  color: Colors.white,
+                  color: appTheme.whiteCustom,
                   size: 30.h,
                 ),
               ),
@@ -193,8 +193,8 @@ class PhotoUploadGalleryController extends GetxController {
     Get.snackbar(
       'Photo Removed',
       'Photo has been removed from gallery',
-      backgroundColor: Colors.orange,
-      colorText: Colors.white,
+      backgroundColor: appTheme.orangeCustom,
+      colorText: appTheme.whiteCustom,
     );
   }
 
@@ -203,8 +203,8 @@ class PhotoUploadGalleryController extends GetxController {
       Get.snackbar(
         'Photos Required',
         'Please upload at least one photo before proceeding',
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
+        backgroundColor: appTheme.orangeCustom,
+        colorText: appTheme.whiteCustom,
       );
       return;
     }

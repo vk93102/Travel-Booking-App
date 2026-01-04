@@ -59,7 +59,7 @@ class PropertyRegistrationController extends GetxController {
       'Redirecting to property license registration...',
       snackPosition: SnackPosition.BOTTOM,
       backgroundColor: Color(0xFF7C412E),
-      colorText: Colors.white,
+      colorText: appTheme.whiteCustom,
     );
   }
 
@@ -84,8 +84,8 @@ class PropertyRegistrationController extends GetxController {
           'Success',
           'Property license number saved successfully',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
+          backgroundColor: appTheme.greenCustom,
+          colorText: appTheme.whiteCustom,
         );
 
         // Clear form

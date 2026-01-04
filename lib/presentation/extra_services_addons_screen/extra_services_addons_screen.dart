@@ -28,9 +28,9 @@ class ExtraServicesAddonsScreen
         width: double.infinity,
         padding: EdgeInsets.fromLTRB(16.h, 6.h, 16.h, 6.h),
         child: CustomAppBar(
-            leadingIcon: 'assets/images/img_frame_2147234282.svg',
+            leadingIcon: ImageConstant.imgFrame2147234282,
             onLeadingPressed: () => Get.back(),
-            backgroundColor: Colors.transparent,
+            backgroundColor: appTheme.transparentCustom,
             leadingButtonColor: Color(0xFFFFFFFF)));
   }
 
@@ -209,7 +209,7 @@ class ExtraServicesAddonsScreen
         child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
           CustomButton(
               text: 'Next',
-              rightIcon: 'assets/images/img_mynauiarrowup_white_a700.svg',
+              rightIcon: ImageConstant.imgMynauiarrowupWhiteA700,
               backgroundColor: Color(0xFF260F06),
               textColor: Color(0xFFFFFFFF),
               onPressed: () => controller.onNextButtonPressed()),

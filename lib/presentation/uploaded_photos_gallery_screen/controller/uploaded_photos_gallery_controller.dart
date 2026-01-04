@@ -29,8 +29,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Permission Required',
         'Camera and storage permissions are required to add photos',
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
+        backgroundColor: appTheme.orangeCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -41,7 +41,7 @@ class UploadedPhotosGalleryController extends GetxController {
       Container(
         padding: EdgeInsets.all(20.h),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: appTheme.whiteCustom,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.h),
             topRight: Radius.circular(20.h),
@@ -92,8 +92,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Error',
         'Failed to capture photo',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -113,8 +113,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Error',
         'Failed to select photo',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -143,8 +143,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Success',
         'Photo added successfully',
-        backgroundColor: Colors.green,
-        colorText: Colors.white,
+        backgroundColor: appTheme.greenCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -155,7 +155,7 @@ class UploadedPhotosGalleryController extends GetxController {
       Container(
         padding: EdgeInsets.all(20.h),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: appTheme.whiteCustom,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.h),
             topRight: Radius.circular(20.h),
@@ -178,8 +178,9 @@ class UploadedPhotosGalleryController extends GetxController {
               },
             ),
             ListTile(
-              leading: Icon(Icons.delete, color: Colors.red),
-              title: Text('Delete Photo', style: TextStyle(color: Colors.red)),
+              leading: Icon(Icons.delete, color: appTheme.redCustom),
+              title: Text('Delete Photo',
+                  style: TextStyle(color: appTheme.redCustom)),
               onTap: () {
                 Get.back();
                 _deletePhoto(photoIndex);
@@ -199,7 +200,7 @@ class UploadedPhotosGalleryController extends GetxController {
       Container(
         padding: EdgeInsets.all(20.h),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: appTheme.whiteCustom,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.h),
             topRight: Radius.circular(20.h),
@@ -250,8 +251,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Error',
         'Failed to capture photo',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -271,8 +272,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Error',
         'Failed to select photo',
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -296,8 +297,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Success',
         'Photo replaced successfully',
-        backgroundColor: Colors.green,
-        colorText: Colors.white,
+        backgroundColor: appTheme.greenCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -327,8 +328,8 @@ class UploadedPhotosGalleryController extends GetxController {
       Get.snackbar(
         'Success',
         'Photo deleted successfully',
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
+        backgroundColor: appTheme.orangeCustom,
+        colorText: appTheme.whiteCustom,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -343,8 +344,8 @@ class UploadedPhotosGalleryController extends GetxController {
         Get.snackbar(
           'Incomplete',
           'Please upload at least 3 photos to continue',
-          backgroundColor: Colors.orange,
-          colorText: Colors.white,
+          backgroundColor: appTheme.orangeCustom,
+          colorText: appTheme.whiteCustom,
           snackPosition: SnackPosition.BOTTOM,
         );
         return;

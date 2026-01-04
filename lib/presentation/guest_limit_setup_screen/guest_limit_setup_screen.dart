@@ -19,7 +19,7 @@ class GuestLimitSetupScreen extends GetWidget<GuestLimitSetupController> {
         child: CustomAppBar(
           leadingIcon: ImageConstant.imgFrame2147234282,
           onLeadingPressed: () => Get.back(),
-          backgroundColor: Colors.transparent,
+          backgroundColor: appTheme.transparentCustom,
           leadingButtonColor: Color(0xFFFFFFFF),
         ),
       ),

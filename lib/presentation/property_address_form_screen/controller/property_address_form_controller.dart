@@ -184,8 +184,8 @@ class PropertyAddressFormController extends GetxController {
           'Success',
           'Address information saved successfully',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
+          backgroundColor: appTheme.greenCustom,
+          colorText: appTheme.whiteCustom,
         );
 
         // Clear form
@@ -198,8 +198,8 @@ class PropertyAddressFormController extends GetxController {
           'Error',
           'Failed to save address information',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.red,
-          colorText: Colors.white,
+          backgroundColor: appTheme.redCustom,
+          colorText: appTheme.whiteCustom,
         );
       } finally {
         isLoading.value = false;

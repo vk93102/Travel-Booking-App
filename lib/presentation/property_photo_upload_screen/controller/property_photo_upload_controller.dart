@@ -1,6 +1,5 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -70,8 +69,8 @@ class PropertyPhotoUploadController extends GetxController {
           'Permission Required',
           'Storage permission is required to access photos',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.red,
-          colorText: Colors.white,
+          backgroundColor: appTheme.redCustom,
+          colorText: appTheme.whiteCustom,
         );
         return;
       }
@@ -91,8 +90,8 @@ class PropertyPhotoUploadController extends GetxController {
           'Photos Selected',
           '${images.length} photo(s) added successfully',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
+          backgroundColor: appTheme.greenCustom,
+          colorText: appTheme.whiteCustom,
         );
       }
     } catch (e) {
@@ -100,8 +99,8 @@ class PropertyPhotoUploadController extends GetxController {
         'Error',
         'Failed to select photos from gallery',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
       );
     } finally {
       isLoading.value = false;
@@ -118,8 +117,8 @@ class PropertyPhotoUploadController extends GetxController {
           'Permission Required',
           'Camera permission is required to take photos',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.red,
-          colorText: Colors.white,
+          backgroundColor: appTheme.redCustom,
+          colorText: appTheme.whiteCustom,
         );
         return;
       }
@@ -138,8 +137,8 @@ class PropertyPhotoUploadController extends GetxController {
           'Photo Captured',
           'Photo captured and added successfully',
           snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Colors.green,
-          colorText: Colors.white,
+          backgroundColor: appTheme.greenCustom,
+          colorText: appTheme.whiteCustom,
         );
       }
     } catch (e) {
@@ -147,8 +146,8 @@ class PropertyPhotoUploadController extends GetxController {
         'Error',
         'Failed to capture photo',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
+        backgroundColor: appTheme.redCustom,
+        colorText: appTheme.whiteCustom,
       );
     } finally {
       isLoading.value = false;
@@ -163,8 +162,8 @@ class PropertyPhotoUploadController extends GetxController {
         'Photo Removed',
         'Photo removed successfully',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
+        backgroundColor: appTheme.orangeCustom,
+        colorText: appTheme.whiteCustom,
       );
     }
   }
@@ -175,8 +174,8 @@ class PropertyPhotoUploadController extends GetxController {
         'Minimum Photos Required',
         'Please select at least 3 photos to continue',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.orange,
-        colorText: Colors.white,
+        backgroundColor: appTheme.orangeCustom,
+        colorText: appTheme.whiteCustom,
       );
       return;
     }
@@ -196,8 +195,8 @@ class PropertyPhotoUploadController extends GetxController {
       'Photos Cleared',
       'All photos have been removed',
       snackPosition: SnackPosition.BOTTOM,
-      backgroundColor: Colors.grey,
-      colorText: Colors.white,
+      backgroundColor: appTheme.greyCustom,
+      colorText: appTheme.whiteCustom,
     );
   }
 }
