@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'core/bindings/app_binding.dart';
 import 'core/app_export.dart';
 import 'firebase_options.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
+          initialBinding: AppBinding(),
           theme: theme,
           locale: Locale('en', ''),
           fallbackLocale: Locale('en', ''),

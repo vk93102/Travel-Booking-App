@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import './controller/login_controller.dart';
+import '../controllers/login_controller.dart';
 
 /// Login screen for email/password authentication.
 class LoginScreen extends GetWidget<LoginController> {

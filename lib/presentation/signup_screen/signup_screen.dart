@@ -1,57 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../../core/app_export.dart';
+import './controller/signup_controller.dart';
 
-class SignupScreen extends StatefulWidget {
+/// Sign-up screen for email/password registration.
+class SignupScreen extends GetWidget<SignupController> {
   const SignupScreen({super.key});
-
-  @override
-  State<SignupScreen> createState() => _SignupScreenState();
-}
-
-class _SignupScreenState extends State<SignupScreen> {
-  final _formKey = GlobalKey<FormState>();
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
-  final _confirmPasswordController = TextEditingController();
-
-  bool _isLoading = false;
-
-  @override
-  void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
-    _confirmPasswordController.dispose();
-    super.dispose();
-  }
-
-  Future<void> _signup() async {
-    if (!_formKey.currentState!.validate()) return;
-
-    setState(() => _isLoading = true);
-    try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim(),
-      );
-      if (mounted) {
-        Get.offAllNamed(AppRoutes.hostOnboardingScreen);
-      }
-    } on FirebaseAuthException catch (e) {
-      _showMessage(e.message ?? 'Sign up failed. Please try again.');
-    } catch (_) {
-      _showMessage('Something went wrong. Please try again.');
-    } finally {
-      if (mounted) {
-        setState(() => _isLoading = false);
-      }
-    }
-  }
-
-  void _showMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,36 +15,37 @@ class _SignupScreenState extends State<SignupScreen> {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Form(
-            key: _formKey,
+            key: controller.formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 16),
                 TextFormField(
-                  controller: _emailController,
+                  controller: controller.emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: const InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    final v = value?.trim() ?? '';
-                    if (v.isEmpty) return 'Email is required';
-                    if (!GetUtils.isEmail(v)) return 'Enter a valid email';
+                    final input = value?.trim() ?? '';
+                    if (input.isEmpty) return 'Email is required';
+                    if (!GetUtils.isEmail(input)) return 'Enter a valid email';
                     return null;
                   },
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
-                  controller: _passwordController,
+                  controller: controller.passwordController,
                   obscureText: true,
                   decoration: const InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if ((value ?? '').isEmpty) return 'Password is required';
-                    if ((value ?? '').length < 6) {
+                    final input = value ?? '';
+                    if (input.isEmpty) return 'Password is required';
+                    if (input.length < 6) {
                       return 'Password must be at least 6 characters';
                     }
                     return null;
@@ -98,32 +53,35 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
-                  controller: _confirmPasswordController,
+                  controller: controller.confirmPasswordController,
                   obscureText: true,
                   decoration: const InputDecoration(
                     labelText: 'Confirm Password',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if ((value ?? '').isEmpty) {
-                      return 'Confirm password is required';
-                    }
-                    if (value!.trim() != _passwordController.text.trim()) {
+                    final input = value?.trim() ?? '';
+                    if (input.isEmpty) return 'Confirm password is required';
+                    if (input != controller.passwordController.text.trim()) {
                       return 'Passwords do not match';
                     }
                     return null;
                   },
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _isLoading ? null : _signup,
-                  child: _isLoading
-                      ? const SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: CircularProgressIndicator(strokeWidth: 2),
-                        )
-                      : const Text('Create Account'),
+                Obx(
+                  () => ElevatedButton(
+                    onPressed: controller.isLoading.value
+                        ? null
+                        : controller.signup,
+                    child: controller.isLoading.value
+                        ? const SizedBox(
+                            height: 20,
+                            width: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : const Text('Create Account'),
+                  ),
                 ),
               ],
             ),

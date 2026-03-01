@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import './controller/phone_otp_controller.dart';
+import '../controllers/phone_otp_controller.dart';
 
 /// Phone OTP screen for SMS-based authentication.
 class PhoneOtpScreen extends GetWidget<PhoneOtpController> {

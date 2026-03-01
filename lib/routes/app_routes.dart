@@ -57,8 +57,11 @@ import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import '../presentation/auth_gate_screen/auth_gate_screen.dart';
 import '../presentation/login_screen/login_screen.dart';
+import '../presentation/login_screen/binding/login_binding.dart';
 import '../presentation/signup_screen/signup_screen.dart';
+import '../presentation/signup_screen/binding/signup_binding.dart';
 import '../presentation/phone_otp_screen/phone_otp_screen.dart';
+import '../presentation/phone_otp_screen/binding/phone_otp_binding.dart';
 
 // ignore_for_file: must_be_immutable
 class AppRoutes {
@@ -124,14 +127,17 @@ class AppRoutes {
     GetPage(
       name: loginScreen,
       page: () => const LoginScreen(),
+      bindings: [LoginBinding()],
     ),
     GetPage(
       name: signupScreen,
       page: () => const SignupScreen(),
+      bindings: [SignupBinding()],
     ),
     GetPage(
       name: phoneOtpScreen,
       page: () => const PhoneOtpScreen(),
+      bindings: [PhoneOtpBinding()],
     ),
     GetPage(
       name: hostOnboardingScreen,

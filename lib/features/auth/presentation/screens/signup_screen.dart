@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import './controller/login_controller.dart';
+import '../controllers/signup_controller.dart';
 
-/// Login screen for email/password authentication.
-class LoginScreen extends GetWidget<LoginController> {
-  const LoginScreen({super.key});
+/// Sign-up screen for email/password registration.
+class SignupScreen extends GetWidget<SignupController> {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: const Text('Sign Up')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -51,29 +51,37 @@ class LoginScreen extends GetWidget<LoginController> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: controller.confirmPasswordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Confirm Password',
+                    border: OutlineInputBorder(),
+                  ),
+                  validator: (value) {
+                    final input = value?.trim() ?? '';
+                    if (input.isEmpty) return 'Confirm password is required';
+                    if (input != controller.passwordController.text.trim()) {
+                      return 'Passwords do not match';
+                    }
+                    return null;
+                  },
+                ),
                 const SizedBox(height: 20),
                 Obx(
                   () => ElevatedButton(
                     onPressed: controller.isLoading.value
                         ? null
-                        : controller.login,
+                        : controller.signup,
                     child: controller.isLoading.value
                         ? const SizedBox(
                             height: 20,
                             width: 20,
                             child: CircularProgressIndicator(strokeWidth: 2),
                           )
-                        : const Text('Login'),
+                        : const Text('Create Account'),
                   ),
-                ),
-                const SizedBox(height: 12),
-                TextButton(
-                  onPressed: controller.goToSignup,
-                  child: const Text('Create a new account'),
-                ),
-                TextButton(
-                  onPressed: controller.goToPhoneOtp,
-                  child: const Text('Login with OTP'),
                 ),
               ],
             ),

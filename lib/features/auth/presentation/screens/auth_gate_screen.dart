@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../host_onboarding_screen/host_onboarding_screen.dart';
-import '../login_screen/login_screen.dart';
+import '../../../../presentation/host_onboarding_screen/host_onboarding_screen.dart';
+import 'login_screen.dart';
 
-/// Entry auth gate in main presentation layer.
+/// Decides which screen to show based on authentication state.
 class AuthGateScreen extends StatelessWidget {
   const AuthGateScreen({super.key});
 
