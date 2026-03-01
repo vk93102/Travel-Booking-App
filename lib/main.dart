@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'core/app_export.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   // 🚨 CRITICAL: Device orientation lock - DO NOT REMOVE
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((
-    value,
-  ) {
-    runApp(MyApp());
-  });
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

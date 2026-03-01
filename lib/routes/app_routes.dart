@@ -55,9 +55,18 @@ import '../presentation/identity_verification_setup_screen/binding/identity_veri
 import '../presentation/government_id_setup_screen/binding/government_id_setup_binding.dart';
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/app_navigation_screen/binding/app_navigation_binding.dart';
+import '../presentation/auth_gate_screen/auth_gate_screen.dart';
+import '../presentation/login_screen/login_screen.dart';
+import '../presentation/signup_screen/signup_screen.dart';
+import '../presentation/phone_otp_screen/phone_otp_screen.dart';
 
 // ignore_for_file: must_be_immutable
 class AppRoutes {
+  static const String authGateScreen = '/';
+  static const String loginScreen = '/login_screen';
+  static const String signupScreen = '/signup_screen';
+  static const String phoneOtpScreen = '/phone_otp_screen';
+
   static const String hostOnboardingScreen = '/host_onboarding_screen';
   static const String hostCategorySelectionScreen =
       '/host_category_selection_screen';
@@ -105,9 +114,25 @@ class AppRoutes {
   static const String governmentIdSetupScreen = '/government_id_setup_screen';
 
   static const String appNavigationScreen = '/app_navigation_screen';
-  static const String initialRoute = '/';
+  static const String initialRoute = authGateScreen;
 
   static List<GetPage> pages = [
+    GetPage(
+      name: authGateScreen,
+      page: () => const AuthGateScreen(),
+    ),
+    GetPage(
+      name: loginScreen,
+      page: () => const LoginScreen(),
+    ),
+    GetPage(
+      name: signupScreen,
+      page: () => const SignupScreen(),
+    ),
+    GetPage(
+      name: phoneOtpScreen,
+      page: () => const PhoneOtpScreen(),
+    ),
     GetPage(
       name: hostOnboardingScreen,
       page: () => HostOnboardingScreen(),
@@ -240,11 +265,6 @@ class AppRoutes {
     ),
     GetPage(
       name: appNavigationScreen,
-      page: () => AppNavigationScreen(),
-      bindings: [AppNavigationBinding()],
-    ),
-    GetPage(
-      name: initialRoute,
       page: () => AppNavigationScreen(),
       bindings: [AppNavigationBinding()],
     ),
